@@ -8,7 +8,14 @@
      xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
      xmlns:schema="http://schema.org/"
      xmlns:RecipeOntolgy="http://www.semanticweb.org/ali/ontologies/2023/11/RecipeOntolgy#">
-    <owl:Ontology rdf:about="http://www.semanticweb.org/ali/ontologies/2023/11/RecipeOntolgy"/>
+<!-- Declaration of the ontology -->
+    <owl:Ontology rdf:about="http://www.semanticweb.org/ali/ontologies/2023/11/RecipeOntolgy#">
+        <!-- Add metadata about your ontology here -->
+        <owl:versionInfo>1.0</owl:versionInfo>
+     
+        <!-- Other metadata properties -->
+    </owl:Ontology>
+    
     
 
 

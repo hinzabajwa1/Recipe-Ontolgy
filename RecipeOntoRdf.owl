@@ -1,0 +1,1307 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://www.semanticweb.org/ali/ontologies/2023/11/RecipeOntolgy"
+     xml:base="http://www.semanticweb.org/ali/ontologies/2023/11/RecipeOntolgy"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:schema="http://schema.org/"
+     xmlns:RecipeOntolgy="http://www.semanticweb.org/ali/ontologies/2023/11/RecipeOntolgy#">
+    <owl:Ontology rdf:about="http://www.semanticweb.org/ali/ontologies/2023/11/RecipeOntolgy"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/ali/ontologies/2023/11/RecipeOntolgy#areInstructionsFor -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/ali/ontologies/2023/11/RecipeOntolgy#areInstructionsFor">
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/ali/ontologies/2023/11/RecipeOntolgy#hasInstructions"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/ali/ontologies/2023/11/RecipeOntolgy#Instructions"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/ali/ontologies/2023/11/RecipeOntolgy#Recipe"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Relates instructions to the recipes they guide.</rdfs:comment>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">areInstructionsFor</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ali/ontologies/2023/11/RecipeOntolgy#belongsToCategory -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/ali/ontologies/2023/11/RecipeOntolgy#belongsToCategory">
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/ali/ontologies/2023/11/RecipeOntolgy#categorizedAs"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/ali/ontologies/2023/11/RecipeOntolgy#Recipe"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/ali/ontologies/2023/11/RecipeOntolgy#RecipeCategory"/>
+        <rdfs:comment>A relationship indicating the category to which an entity belongs.</rdfs:comment>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">belongsToCategory</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ali/ontologies/2023/11/RecipeOntolgy#belongsToRecipe -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/ali/ontologies/2023/11/RecipeOntolgy#belongsToRecipe">
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/ali/ontologies/2023/11/RecipeOntolgy#hasNutrition"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/ali/ontologies/2023/11/RecipeOntolgy#Nutrition"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/ali/ontologies/2023/11/RecipeOntolgy#Recipe"/>
+        <rdfs:comment>Indicates the association of elements like ingredients, instructions, or categories with a specific recipe, creating a connection to the culinary composition.</rdfs:comment>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">belongsToRecipe</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ali/ontologies/2023/11/RecipeOntolgy#categorizedAs -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/ali/ontologies/2023/11/RecipeOntolgy#categorizedAs">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/ali/ontologies/2023/11/RecipeOntolgy#RecipeCategory"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/ali/ontologies/2023/11/RecipeOntolgy#Recipe"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Indicates the categorization of recipes under specific categories.</rdfs:comment>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">categorizedAs</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ali/ontologies/2023/11/RecipeOntolgy#hasCategory -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/ali/ontologies/2023/11/RecipeOntolgy#hasCategory">
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/ali/ontologies/2023/11/RecipeOntolgy#isCategoryOf"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/ali/ontologies/2023/11/RecipeOntolgy#Ingredient"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/ali/ontologies/2023/11/RecipeOntolgy#IngredientCategory"/>
+        <rdfs:comment>A relationship indicating the category to which an entity belongs.</rdfs:comment>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">hasCategory</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ali/ontologies/2023/11/RecipeOntolgy#hasChef -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/ali/ontologies/2023/11/RecipeOntolgy#hasChef">
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/ali/ontologies/2023/11/RecipeOntolgy#isChefFor"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/ali/ontologies/2023/11/RecipeOntolgy#Recipe"/>
+        <rdfs:range rdf:resource="http://schema.org/Person"/>
+        <rdfs:comment>A relationship connecting a recipe to the chef responsible for its creation.</rdfs:comment>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">hasChef</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ali/ontologies/2023/11/RecipeOntolgy#hasComponent -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/ali/ontologies/2023/11/RecipeOntolgy#hasComponent">
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/ali/ontologies/2023/11/RecipeOntolgy#isComponentOf"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/ali/ontologies/2023/11/RecipeOntolgy#Ingredient"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/ali/ontologies/2023/11/RecipeOntolgy#Nutrition"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Connects ingredients to their presence in nutrition details.</rdfs:comment>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">hasComponent</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ali/ontologies/2023/11/RecipeOntolgy#hasIngredient -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/ali/ontologies/2023/11/RecipeOntolgy#hasIngredient">
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/ali/ontologies/2023/11/RecipeOntolgy#isIngredientOf"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/ali/ontologies/2023/11/RecipeOntolgy#Recipe"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/ali/ontologies/2023/11/RecipeOntolgy#Ingredient"/>
+        <rdfs:comment>A relationship connecting a recipe to its constituent elements.</rdfs:comment>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">hasIngredient</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ali/ontologies/2023/11/RecipeOntolgy#hasInstructions -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/ali/ontologies/2023/11/RecipeOntolgy#hasInstructions">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/ali/ontologies/2023/11/RecipeOntolgy#Recipe"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/ali/ontologies/2023/11/RecipeOntolgy#Instructions"/>
+        <rdfs:comment>A relationship linking a recipe to its step-by-step guide</rdfs:comment>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">hasInstructions</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ali/ontologies/2023/11/RecipeOntolgy#hasNutrition -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/ali/ontologies/2023/11/RecipeOntolgy#hasNutrition">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/ali/ontologies/2023/11/RecipeOntolgy#Recipe"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/ali/ontologies/2023/11/RecipeOntolgy#Nutrition"/>
+        <rdfs:comment>A relationship linking a recipe to its nutritional information.</rdfs:comment>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">hasNutrition</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ali/ontologies/2023/11/RecipeOntolgy#hasTechnique -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/ali/ontologies/2023/11/RecipeOntolgy#hasTechnique">
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/ali/ontologies/2023/11/RecipeOntolgy#isTechniqueOf"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/ali/ontologies/2023/11/RecipeOntolgy#Instructions"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/ali/ontologies/2023/11/RecipeOntolgy#CookingTechnique"/>
+        <rdfs:comment>This relationship signifies that a particular entity, such as a recipe or cooking method, possesses a specific technique</rdfs:comment>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">hasTechnique</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ali/ontologies/2023/11/RecipeOntolgy#isCategoryOf -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/ali/ontologies/2023/11/RecipeOntolgy#isCategoryOf">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/ali/ontologies/2023/11/RecipeOntolgy#IngredientCategory"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/ali/ontologies/2023/11/RecipeOntolgy#Ingredient"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Connects ingredient categories to specific ingredients.</rdfs:comment>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">isCategoryOf</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ali/ontologies/2023/11/RecipeOntolgy#isChefFor -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/ali/ontologies/2023/11/RecipeOntolgy#isChefFor">
+        <rdfs:domain rdf:resource="http://schema.org/Person"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/ali/ontologies/2023/11/RecipeOntolgy#Recipe"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Establishes a person as a chef in the context of a recipe.</rdfs:comment>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">isChefFor</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ali/ontologies/2023/11/RecipeOntolgy#isComponentOf -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/ali/ontologies/2023/11/RecipeOntolgy#isComponentOf">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/ali/ontologies/2023/11/RecipeOntolgy#Nutrition"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/ali/ontologies/2023/11/RecipeOntolgy#Ingredient"/>
+        <rdfs:comment>A relationship indicating that an entity is part of another.</rdfs:comment>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">isComponentOf</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ali/ontologies/2023/11/RecipeOntolgy#isFollowedBy -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/ali/ontologies/2023/11/RecipeOntolgy#isFollowedBy">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#SymmetricProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/ali/ontologies/2023/11/RecipeOntolgy#Instructions"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/ali/ontologies/2023/11/RecipeOntolgy#Instructions"/>
+        <rdfs:comment>A relationship indicating the sequence of steps in a process.</rdfs:comment>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">isFollowedBy</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ali/ontologies/2023/11/RecipeOntolgy#isIngredientOf -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/ali/ontologies/2023/11/RecipeOntolgy#isIngredientOf">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/ali/ontologies/2023/11/RecipeOntolgy#Ingredient"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/ali/ontologies/2023/11/RecipeOntolgy#Recipe"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Associates ingredients with the recipes they belong to.</rdfs:comment>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">isIngredientOf</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ali/ontologies/2023/11/RecipeOntolgy#isSimilarTo -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/ali/ontologies/2023/11/RecipeOntolgy#isSimilarTo">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#SymmetricProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/ali/ontologies/2023/11/RecipeOntolgy#Recipe"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/ali/ontologies/2023/11/RecipeOntolgy#Recipe"/>
+        <rdfs:comment>A relationship indicating similarity between entities.</rdfs:comment>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">isSimilarTo</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ali/ontologies/2023/11/RecipeOntolgy#isSubstituteFor -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/ali/ontologies/2023/11/RecipeOntolgy#isSubstituteFor">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#SymmetricProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/ali/ontologies/2023/11/RecipeOntolgy#Ingredient"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/ali/ontologies/2023/11/RecipeOntolgy#Ingredient"/>
+        <rdfs:comment>A relationship connecting entities that can replace one another.</rdfs:comment>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">isSubstituteFor</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ali/ontologies/2023/11/RecipeOntolgy#isTechniqueOf -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/ali/ontologies/2023/11/RecipeOntolgy#isTechniqueOf">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/ali/ontologies/2023/11/RecipeOntolgy#CookingTechnique"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/ali/ontologies/2023/11/RecipeOntolgy#Instructions"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Links cooking techniques to corresponding instructions.</rdfs:comment>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">isTechniqueOf</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ali/ontologies/2023/11/RecipeOntolgy#performedOn -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/ali/ontologies/2023/11/RecipeOntolgy#performedOn">
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/ali/ontologies/2023/11/RecipeOntolgy#utilizedInProcessof"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/ali/ontologies/2023/11/RecipeOntolgy#Instructions"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/ali/ontologies/2023/11/RecipeOntolgy#Ingredient"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A relationship indicating the instructions are performed on which ingredient</rdfs:comment>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">performedOn</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ali/ontologies/2023/11/RecipeOntolgy#utilizedInProcessof -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/ali/ontologies/2023/11/RecipeOntolgy#utilizedInProcessof">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/ali/ontologies/2023/11/RecipeOntolgy#Ingredient"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/ali/ontologies/2023/11/RecipeOntolgy#Instructions"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Describes the use of ingredients in cooking processes.</rdfs:comment>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">utilizedInProcessof</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://schema.org/givenName -->
+
+    <owl:DatatypeProperty rdf:about="http://schema.org/givenName">
+        <rdfs:domain rdf:resource="http://schema.org/Person"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment>It represents the first or given name of an individual in an ontology.</rdfs:comment>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">schema:givenName</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://schema.org/name -->
+
+    <owl:DatatypeProperty rdf:about="http://schema.org/name">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/ali/ontologies/2023/11/RecipeOntolgy#Recipe"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment>The label or identifier for a recipe, ingredient, or dish.</rdfs:comment>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">schema:name</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://schema.org/value -->
+
+    <owl:DatatypeProperty rdf:about="http://schema.org/value">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/ali/ontologies/2023/11/RecipeOntolgy#Nutrition"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+        <rdfs:comment>The inherent worth or usefulness of an ingredient or dish.</rdfs:comment>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">schema:value</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ali/ontologies/2023/11/RecipeOntolgy#cookingTemperature -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/ali/ontologies/2023/11/RecipeOntolgy#cookingTemperature">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/ali/ontologies/2023/11/RecipeOntolgy#Instructions"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+        <rdfs:comment>The required heat level for cooking a dish.</rdfs:comment>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">cookingTemperature</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ali/ontologies/2023/11/RecipeOntolgy#cookingTime -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/ali/ontologies/2023/11/RecipeOntolgy#cookingTime">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/ali/ontologies/2023/11/RecipeOntolgy#Recipe"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
+        <rdfs:comment>The duration required for the complete cooking of a dish.</rdfs:comment>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">cookingTime</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ali/ontologies/2023/11/RecipeOntolgy#cuisineType -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/ali/ontologies/2023/11/RecipeOntolgy#cuisineType">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/ali/ontologies/2023/11/RecipeOntolgy#Recipe"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment>The specific style or tradition of cooking associated with a region or culture.</rdfs:comment>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">cuisineType</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ali/ontologies/2023/11/RecipeOntolgy#glutenFree -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/ali/ontologies/2023/11/RecipeOntolgy#glutenFree">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/ali/ontologies/2023/11/RecipeOntolgy#Grain"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+        <rdfs:comment>A classification indicating the absence of gluten, suitable for individuals with gluten sensitivity.</rdfs:comment>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">glutenFree</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ali/ontologies/2023/11/RecipeOntolgy#ingredientName -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/ali/ontologies/2023/11/RecipeOntolgy#ingredientName">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/ali/ontologies/2023/11/RecipeOntolgy#Ingredient"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment>The name or label identifying a specific ingredient.</rdfs:comment>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ingredientName</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ali/ontologies/2023/11/RecipeOntolgy#ironContent -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/ali/ontologies/2023/11/RecipeOntolgy#ironContent">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/ali/ontologies/2023/11/RecipeOntolgy#Nutrition"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
+        <rdfs:comment>The amount of iron present in a food item.</rdfs:comment>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ironContent</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ali/ontologies/2023/11/RecipeOntolgy#lowCalorie -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/ali/ontologies/2023/11/RecipeOntolgy#lowCalorie">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/ali/ontologies/2023/11/RecipeOntolgy#CaloricInformation"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+        <rdfs:comment>A designation for food or dishes that are relatively low in calories.</rdfs:comment>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">lowCalorie</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ali/ontologies/2023/11/RecipeOntolgy#mealType -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/ali/ontologies/2023/11/RecipeOntolgy#mealType">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/ali/ontologies/2023/11/RecipeOntolgy#Recipe"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment>A classification of a dish based on its suitability for breakfast, lunch, or dinner.</rdfs:comment>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">mealType</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ali/ontologies/2023/11/RecipeOntolgy#organic -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/ali/ontologies/2023/11/RecipeOntolgy#organic">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/ali/ontologies/2023/11/RecipeOntolgy#Ingredient"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+        <rdfs:comment>Relating to or derived from living matter, often indicating the absence of synthetic additives.</rdfs:comment>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">organic</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ali/ontologies/2023/11/RecipeOntolgy#prepTime -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/ali/ontologies/2023/11/RecipeOntolgy#prepTime">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/ali/ontologies/2023/11/RecipeOntolgy#Recipe"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
+        <rdfs:comment>The amount of time required to prepare a dish.</rdfs:comment>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">prepTime</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ali/ontologies/2023/11/RecipeOntolgy#preparationSteps -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/ali/ontologies/2023/11/RecipeOntolgy#preparationSteps">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/ali/ontologies/2023/11/RecipeOntolgy#Instructions"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment>sequential actions required for the preparation of a dish.</rdfs:comment>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">preparationSteps</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ali/ontologies/2023/11/RecipeOntolgy#recommendedProteinIntake -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/ali/ontologies/2023/11/RecipeOntolgy#recommendedProteinIntake">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/ali/ontologies/2023/11/RecipeOntolgy#ProteinContent"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
+        <rdfs:comment>A suggested amount of protein consumption for a specified purpose.</rdfs:comment>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">recommendedProteinIntake</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ali/ontologies/2023/11/RecipeOntolgy#seasonal -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/ali/ontologies/2023/11/RecipeOntolgy#seasonal">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/ali/ontologies/2023/11/RecipeOntolgy#Ingredient"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+        <rdfs:comment>Pertaining to ingredients or dishes associated with a specific season.</rdfs:comment>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">seasonal</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ali/ontologies/2023/11/RecipeOntolgy#servingSize -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/ali/ontologies/2023/11/RecipeOntolgy#servingSize">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/ali/ontologies/2023/11/RecipeOntolgy#Recipe"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment>The recommended portion size for a single serving of a dish.</rdfs:comment>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">servingSize</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ali/ontologies/2023/11/RecipeOntolgy#spicy -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/ali/ontologies/2023/11/RecipeOntolgy#spicy">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/ali/ontologies/2023/11/RecipeOntolgy#Recipe"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+        <rdfs:comment>A characteristic indicating the presence of pungent or hot flavors.</rdfs:comment>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">spicy</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ali/ontologies/2023/11/RecipeOntolgy#tasteProfile -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/ali/ontologies/2023/11/RecipeOntolgy#tasteProfile">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/ali/ontologies/2023/11/RecipeOntolgy#Ingredient"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment>The combination of flavors that characterize a dish.</rdfs:comment>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">tasteProfile</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ali/ontologies/2023/11/RecipeOntolgy#vegetarian -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/ali/ontologies/2023/11/RecipeOntolgy#vegetarian">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/ali/ontologies/2023/11/RecipeOntolgy#Recipe"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+        <rdfs:comment>A diet excluding meat but including plant-based foods.</rdfs:comment>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">vegetarian</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ali/ontologies/2023/11/RecipeOntolgy#vitaminDContent -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/ali/ontologies/2023/11/RecipeOntolgy#vitaminDContent">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/ali/ontologies/2023/11/RecipeOntolgy#Nutrition"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
+        <rdfs:comment>The quantity of vitamin D in a food item, essential for bone health.</rdfs:comment>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">vitaminDContent</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://schema.org/Person -->
+
+    <owl:Class rdf:about="http://schema.org/Person">
+        <rdfs:comment>An individual, possibly a chef or involved in cooking or consuming a dish.</rdfs:comment>
+        <rdfs:label>schema:Person</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ali/ontologies/2023/11/RecipeOntolgy#Appetizer -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ali/ontologies/2023/11/RecipeOntolgy#Appetizer">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ali/ontologies/2023/11/RecipeOntolgy#Recipe"/>
+        <rdfs:comment>A small dish served before the main course.</rdfs:comment>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Appetizer</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ali/ontologies/2023/11/RecipeOntolgy#BakingInstructions -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ali/ontologies/2023/11/RecipeOntolgy#BakingInstructions">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ali/ontologies/2023/11/RecipeOntolgy#Instructions"/>
+        <rdfs:comment>Steps guiding the cooking of food in an oven.</rdfs:comment>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">BakingInstructions</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ali/ontologies/2023/11/RecipeOntolgy#Beverage -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ali/ontologies/2023/11/RecipeOntolgy#Beverage">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ali/ontologies/2023/11/RecipeOntolgy#Recipe"/>
+        <rdfs:comment>A drinkable liquid like tea, coffee, or juice.</rdfs:comment>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Beverage</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ali/ontologies/2023/11/RecipeOntolgy#BlendingInstructions -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ali/ontologies/2023/11/RecipeOntolgy#BlendingInstructions">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ali/ontologies/2023/11/RecipeOntolgy#Instructions"/>
+        <rdfs:comment>Sequential steps providing guidance on the proper mixing of ingredients to achieve a harmonious blend.</rdfs:comment>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">BlendingInstructions</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ali/ontologies/2023/11/RecipeOntolgy#BoilingInstructions -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ali/ontologies/2023/11/RecipeOntolgy#BoilingInstructions">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ali/ontologies/2023/11/RecipeOntolgy#Instructions"/>
+        <rdfs:comment>Specific steps directing the cooking of food by submerging it in boiling water.</rdfs:comment>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">BoilingInstructions</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ali/ontologies/2023/11/RecipeOntolgy#Breakfast -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ali/ontologies/2023/11/RecipeOntolgy#Breakfast">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ali/ontologies/2023/11/RecipeOntolgy#Recipe"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ali/ontologies/2023/11/RecipeOntolgy#CaloricInformation -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ali/ontologies/2023/11/RecipeOntolgy#CaloricInformation">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ali/ontologies/2023/11/RecipeOntolgy#Nutrition"/>
+        <rdfs:comment>Details regarding the energy content of a food item.</rdfs:comment>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">CaloricInformation</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ali/ontologies/2023/11/RecipeOntolgy#CarbohydrateContent -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ali/ontologies/2023/11/RecipeOntolgy#CarbohydrateContent">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ali/ontologies/2023/11/RecipeOntolgy#Nutrition"/>
+        <rdfs:comment>Amount of carbohydrates in a food item.</rdfs:comment>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">CarbohydrateContent</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ali/ontologies/2023/11/RecipeOntolgy#CookingTechnique -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ali/ontologies/2023/11/RecipeOntolgy#CookingTechnique">
+        <rdfs:comment>A skillful or specialized method used in cooking.</rdfs:comment>
+        <rdfs:label>CookingTechnique</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ali/ontologies/2023/11/RecipeOntolgy#Dairy -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ali/ontologies/2023/11/RecipeOntolgy#Dairy">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ali/ontologies/2023/11/RecipeOntolgy#Ingredient"/>
+        <rdfs:comment>Products derived from milk, such as cheese or yogurt.</rdfs:comment>
+        <rdfs:label>Dairy</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ali/ontologies/2023/11/RecipeOntolgy#Dessert -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ali/ontologies/2023/11/RecipeOntolgy#Dessert">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ali/ontologies/2023/11/RecipeOntolgy#Recipe"/>
+        <rdfs:comment>Sweet dishes served at the end of a meal.</rdfs:comment>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Dessert</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ali/ontologies/2023/11/RecipeOntolgy#DietaryFiberContent -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ali/ontologies/2023/11/RecipeOntolgy#DietaryFiberContent">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ali/ontologies/2023/11/RecipeOntolgy#Nutrition"/>
+        <rdfs:comment>The measure of indigestible plant material in food, essential for digestive health.</rdfs:comment>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">DietaryFiberContent</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ali/ontologies/2023/11/RecipeOntolgy#FatContent -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ali/ontologies/2023/11/RecipeOntolgy#FatContent">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ali/ontologies/2023/11/RecipeOntolgy#Nutrition"/>
+        <rdfs:comment>Quantity of fats present in a food item.</rdfs:comment>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">FatContent</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ali/ontologies/2023/11/RecipeOntolgy#Fruit -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ali/ontologies/2023/11/RecipeOntolgy#Fruit">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ali/ontologies/2023/11/RecipeOntolgy#Ingredient"/>
+        <rdfs:comment>Edible, usually sweet, fleshy product of flowering plants.</rdfs:comment>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Fruit</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ali/ontologies/2023/11/RecipeOntolgy#FryingInstructions -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ali/ontologies/2023/11/RecipeOntolgy#FryingInstructions">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ali/ontologies/2023/11/RecipeOntolgy#Instructions"/>
+        <rdfs:comment>Steps directing the cooking of food in hot oil or fat.</rdfs:comment>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">FryingInstructions</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ali/ontologies/2023/11/RecipeOntolgy#Grain -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ali/ontologies/2023/11/RecipeOntolgy#Grain">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ali/ontologies/2023/11/RecipeOntolgy#Ingredient"/>
+        <rdfs:comment>A cereal crop, such as wheat or rice.</rdfs:comment>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Grain</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ali/ontologies/2023/11/RecipeOntolgy#GrillingInstructions -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ali/ontologies/2023/11/RecipeOntolgy#GrillingInstructions">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ali/ontologies/2023/11/RecipeOntolgy#Instructions"/>
+        <rdfs:comment>Steps guiding the cooking of food on a grill.</rdfs:comment>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">GrillingInstructions</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ali/ontologies/2023/11/RecipeOntolgy#Herb -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ali/ontologies/2023/11/RecipeOntolgy#Herb">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ali/ontologies/2023/11/RecipeOntolgy#Ingredient"/>
+        <rdfs:comment>Plant or part of a plant valued for its flavor, scent, or medicinal properties, often used in cooking.</rdfs:comment>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Herb</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ali/ontologies/2023/11/RecipeOntolgy#Ingredient -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ali/ontologies/2023/11/RecipeOntolgy#Ingredient">
+        <rdfs:comment>Constituent part used in the preparation of a recipe.</rdfs:comment>
+        <rdfs:label>Ingredient</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ali/ontologies/2023/11/RecipeOntolgy#IngredientCategory -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ali/ontologies/2023/11/RecipeOntolgy#IngredientCategory">
+        <rdfs:comment>Grouping of ingredients based on shared characteristics.</rdfs:comment>
+        <rdfs:label>IngredientCategory</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ali/ontologies/2023/11/RecipeOntolgy#Instructions -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ali/ontologies/2023/11/RecipeOntolgy#Instructions">
+        <rdfs:comment>A relationship indicating the category to which an entity belongs.</rdfs:comment>
+        <rdfs:label>Instructions</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ali/ontologies/2023/11/RecipeOntolgy#MainCourse -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ali/ontologies/2023/11/RecipeOntolgy#MainCourse">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ali/ontologies/2023/11/RecipeOntolgy#Recipe"/>
+        <rdfs:comment>The primary dish in a meal.</rdfs:comment>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">MainCourse</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ali/ontologies/2023/11/RecipeOntolgy#Meat -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ali/ontologies/2023/11/RecipeOntolgy#Meat">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ali/ontologies/2023/11/RecipeOntolgy#Ingredient"/>
+        <rdfs:comment>Edible animal flesh utilized as a food source.</rdfs:comment>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Meat</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ali/ontologies/2023/11/RecipeOntolgy#MineralContent -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ali/ontologies/2023/11/RecipeOntolgy#MineralContent">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ali/ontologies/2023/11/RecipeOntolgy#Nutrition"/>
+        <rdfs:comment>Presence and quantity of minerals in a food item.</rdfs:comment>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">MineralContent</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ali/ontologies/2023/11/RecipeOntolgy#MixingInstructions -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ali/ontologies/2023/11/RecipeOntolgy#MixingInstructions">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ali/ontologies/2023/11/RecipeOntolgy#Instructions"/>
+        <rdfs:comment>Guidelines for thoroughly combining ingredients during preparation.</rdfs:comment>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">MixingInstructions</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ali/ontologies/2023/11/RecipeOntolgy#Nutrition -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ali/ontologies/2023/11/RecipeOntolgy#Nutrition">
+        <rdfs:comment>The science of food and its impact on health.</rdfs:comment>
+        <rdfs:label>Nutrition</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ali/ontologies/2023/11/RecipeOntolgy#ProteinContent -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ali/ontologies/2023/11/RecipeOntolgy#ProteinContent">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ali/ontologies/2023/11/RecipeOntolgy#Nutrition"/>
+        <rdfs:comment>Amount of protein present in a food item, essential for bodily functions.</rdfs:comment>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ProteinContent</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ali/ontologies/2023/11/RecipeOntolgy#Recipe -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ali/ontologies/2023/11/RecipeOntolgy#Recipe">
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/ali/ontologies/2023/11/RecipeOntolgy#RecipeCategory"/>
+        <rdfs:comment>A set of instructions for preparing a particular dish.</rdfs:comment>
+        <rdfs:label>Recipe</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ali/ontologies/2023/11/RecipeOntolgy#RecipeCategory -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ali/ontologies/2023/11/RecipeOntolgy#RecipeCategory">
+        <rdfs:comment>Classification of a recipe into a specific culinary group.</rdfs:comment>
+        <rdfs:label>RecipeCategory</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ali/ontologies/2023/11/RecipeOntolgy#RoastingInstructions -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ali/ontologies/2023/11/RecipeOntolgy#RoastingInstructions">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ali/ontologies/2023/11/RecipeOntolgy#Instructions"/>
+        <rdfs:comment>Steps guiding the cooking of food in an oven using dry heat.</rdfs:comment>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">RoastingInstructions</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ali/ontologies/2023/11/RecipeOntolgy#Salad -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ali/ontologies/2023/11/RecipeOntolgy#Salad">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ali/ontologies/2023/11/RecipeOntolgy#Recipe"/>
+        <rdfs:comment>A dish consisting of mixed vegetables.</rdfs:comment>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Salad</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ali/ontologies/2023/11/RecipeOntolgy#SauteingInstructions -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ali/ontologies/2023/11/RecipeOntolgy#SauteingInstructions">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ali/ontologies/2023/11/RecipeOntolgy#Instructions"/>
+        <rdfs:comment>steps directing the cooking of food in a small amount of oil.</rdfs:comment>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">SauteingInstructions</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ali/ontologies/2023/11/RecipeOntolgy#Seafood -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ali/ontologies/2023/11/RecipeOntolgy#Seafood">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ali/ontologies/2023/11/RecipeOntolgy#Ingredient"/>
+        <rdfs:comment>Edible aquatic animals used as food.</rdfs:comment>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Seafood</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ali/ontologies/2023/11/RecipeOntolgy#SideDish -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ali/ontologies/2023/11/RecipeOntolgy#SideDish">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ali/ontologies/2023/11/RecipeOntolgy#Recipe"/>
+        <rdfs:comment>A supplementary dish served alongside the main course.</rdfs:comment>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">SideDish</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ali/ontologies/2023/11/RecipeOntolgy#Soup -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ali/ontologies/2023/11/RecipeOntolgy#Soup">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ali/ontologies/2023/11/RecipeOntolgy#Recipe"/>
+        <rdfs:comment>A liquid dish typically consisting of broth, vegetables, and sometimes meat or other ingredients.</rdfs:comment>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Soup</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ali/ontologies/2023/11/RecipeOntolgy#Spice -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ali/ontologies/2023/11/RecipeOntolgy#Spice">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ali/ontologies/2023/11/RecipeOntolgy#Ingredient"/>
+        <rdfs:comment>A plant-derived substance used for flavoring.</rdfs:comment>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">spice</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ali/ontologies/2023/11/RecipeOntolgy#SugarContent -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ali/ontologies/2023/11/RecipeOntolgy#SugarContent">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ali/ontologies/2023/11/RecipeOntolgy#Nutrition"/>
+        <rdfs:comment>Quantity of sugar present in a food item.</rdfs:comment>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">SugarContent</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ali/ontologies/2023/11/RecipeOntolgy#Vegetable -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ali/ontologies/2023/11/RecipeOntolgy#Vegetable">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ali/ontologies/2023/11/RecipeOntolgy#Ingredient"/>
+        <rdfs:comment>Edible plant or part of a plant, often savory in flavor.</rdfs:comment>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Vegetable</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ali/ontologies/2023/11/RecipeOntolgy#VitaminContent -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ali/ontologies/2023/11/RecipeOntolgy#VitaminContent">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ali/ontologies/2023/11/RecipeOntolgy#Nutrition"/>
+        <rdfs:comment>The quantity of vitamin C in a food item, contributing to immune function.</rdfs:comment>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">VitaminContent</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/ali/ontologies/2023/11/RecipeOntolgy#Breakfast -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ali/ontologies/2023/11/RecipeOntolgy#Breakfast">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ali/ontologies/2023/11/RecipeOntolgy#RecipeCategory"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ali/ontologies/2023/11/RecipeOntolgy#Chef1 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ali/ontologies/2023/11/RecipeOntolgy#Chef1">
+        <rdf:type rdf:resource="http://schema.org/Person"/>
+        <schema:givenName>Alfredo di Lelio</schema:givenName>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ali/ontologies/2023/11/RecipeOntolgy#Chef2 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ali/ontologies/2023/11/RecipeOntolgy#Chef2">
+        <rdf:type rdf:resource="http://schema.org/Person"/>
+        <schema:givenName>Gordon Ramsay</schema:givenName>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ali/ontologies/2023/11/RecipeOntolgy#Fresh_parsley_for_garnish -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ali/ontologies/2023/11/RecipeOntolgy#Fresh_parsley_for_garnish">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ali/ontologies/2023/11/RecipeOntolgy#Ingredient"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ali/ontologies/2023/11/RecipeOntolgy#Main_Course -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ali/ontologies/2023/11/RecipeOntolgy#Main_Course">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ali/ontologies/2023/11/RecipeOntolgy#RecipeCategory"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ali/ontologies/2023/11/RecipeOntolgy#Recipe1 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ali/ontologies/2023/11/RecipeOntolgy#Recipe1">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ali/ontologies/2023/11/RecipeOntolgy#Recipe"/>
+        <RecipeOntolgy:belongsToCategory rdf:resource="http://www.semanticweb.org/ali/ontologies/2023/11/RecipeOntolgy#Main_Course"/>
+        <RecipeOntolgy:hasIngredient rdf:resource="http://www.semanticweb.org/ali/ontologies/2023/11/RecipeOntolgy#Fresh_parsley_for_garnish"/>
+        <RecipeOntolgy:hasIngredient rdf:resource="http://www.semanticweb.org/ali/ontologies/2023/11/RecipeOntolgy#Salt_and_black_pepper_to_taste"/>
+        <RecipeOntolgy:hasIngredient rdf:resource="http://www.semanticweb.org/ali/ontologies/2023/11/RecipeOntolgy#1_cup_grated_Parmesan_cheese"/>
+        <RecipeOntolgy:hasIngredient rdf:resource="http://www.semanticweb.org/ali/ontologies/2023/11/RecipeOntolgy#1_cup_heavy_cream"/>
+        <RecipeOntolgy:hasIngredient rdf:resource="http://www.semanticweb.org/ali/ontologies/2023/11/RecipeOntolgy#1/2_cup_unsalted_butter"/>
+        <RecipeOntolgy:hasIngredient rdf:resource="http://www.semanticweb.org/ali/ontologies/2023/11/RecipeOntolgy#8_oz_fettuccine_pasta"/>
+        <RecipeOntolgy:hasInstructions rdf:resource="http://www.semanticweb.org/ali/ontologies/2023/11/RecipeOntolgy#Step1_Cook_fettuccine_pasta_according_to_package_instructions._Drain_and_set_aside."/>
+        <RecipeOntolgy:hasInstructions rdf:resource="http://www.semanticweb.org/ali/ontologies/2023/11/RecipeOntolgy#Step2_In_a_large_skillet_melt_the_butter_over_medium_heat."/>
+        <RecipeOntolgy:hasInstructions rdf:resource="http://www.semanticweb.org/ali/ontologies/2023/11/RecipeOntolgy#Step3_Pour_in_the_heavy_cream_stirring_continuously_until_it_starts_to_simmer."/>
+        <RecipeOntolgy:hasInstructions rdf:resource="http://www.semanticweb.org/ali/ontologies/2023/11/RecipeOntolgy#Step4_Reduce_heat_to_low_and_gradually_add_grated_Parmesan_cheese_stirring_until_the_sauce_is_smooth_and_creamy."/>
+        <RecipeOntolgy:hasInstructions rdf:resource="http://www.semanticweb.org/ali/ontologies/2023/11/RecipeOntolgy#Step5_Season_with_salt_and_black_pepper_to_taste._Adjust_the_consistency_with_a_little_pasta_water_if_needed."/>
+        <RecipeOntolgy:hasInstructions rdf:resource="http://www.semanticweb.org/ali/ontologies/2023/11/RecipeOntolgy#Step6_Add_the_cooked_fettuccine_to_the_skillet_tossing_to_coat_the_pasta_evenly_in_the_Alfredo_sauce."/>
+        <RecipeOntolgy:hasInstructions rdf:resource="http://www.semanticweb.org/ali/ontologies/2023/11/RecipeOntolgy#Step7_Cook_for_an_additional_2-3_minutes_until_the_pasta_is_heated_through."/>
+        <RecipeOntolgy:hasInstructions rdf:resource="http://www.semanticweb.org/ali/ontologies/2023/11/RecipeOntolgy#Step8_Garnish_with_fresh_parsley_and_serve_immediately."/>
+        <RecipeOntolgy:hasNutrition rdf:resource="http://www.semanticweb.org/ali/ontologies/2023/11/RecipeOntolgy#Caloric_Value:_550_calories_per_serving"/>
+        <RecipeOntolgy:hasNutrition rdf:resource="http://www.semanticweb.org/ali/ontologies/2023/11/RecipeOntolgy#Carbohydrate_Content:_35g"/>
+        <RecipeOntolgy:hasNutrition rdf:resource="http://www.semanticweb.org/ali/ontologies/2023/11/RecipeOntolgy#Fat_Content:_40g"/>
+        <RecipeOntolgy:hasNutrition rdf:resource="http://www.semanticweb.org/ali/ontologies/2023/11/RecipeOntolgy#Protein_Content:_15g"/>
+        <schema:name>Creamy Alfredo Pasta</schema:name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ali/ontologies/2023/11/RecipeOntolgy#Recipe2 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ali/ontologies/2023/11/RecipeOntolgy#Recipe2">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ali/ontologies/2023/11/RecipeOntolgy#Recipe"/>
+        <RecipeOntolgy:belongsToCategory rdf:resource="http://www.semanticweb.org/ali/ontologies/2023/11/RecipeOntolgy#Breakfast"/>
+        <RecipeOntolgy:hasIngredient rdf:resource="http://www.semanticweb.org/ali/ontologies/2023/11/RecipeOntolgy#Fresh_parsley_for_garnish"/>
+        <RecipeOntolgy:hasIngredient rdf:resource="http://www.semanticweb.org/ali/ontologies/2023/11/RecipeOntolgy#Salt_and_black_pepper_to_taste"/>
+        <RecipeOntolgy:hasIngredient rdf:resource="http://www.semanticweb.org/ali/ontologies/2023/11/RecipeOntolgy#1_tablespoon_butter"/>
+        <RecipeOntolgy:hasIngredient rdf:resource="http://www.semanticweb.org/ali/ontologies/2023/11/RecipeOntolgy#1/2_cup_shredded_cheddar_cheese"/>
+        <RecipeOntolgy:hasIngredient rdf:resource="http://www.semanticweb.org/ali/ontologies/2023/11/RecipeOntolgy#1/4_cup_milk"/>
+        <RecipeOntolgy:hasIngredient rdf:resource="http://www.semanticweb.org/ali/ontologies/2023/11/RecipeOntolgy#3_large_eggs"/>
+        <RecipeOntolgy:hasInstructions rdf:resource="http://www.semanticweb.org/ali/ontologies/2023/11/RecipeOntolgy#Step1_Crack_the_eggs_into_a_bowl_add_milk__salt_and_black_pepper._Whisk_until_well_combined."/>
+        <RecipeOntolgy:hasInstructions rdf:resource="http://www.semanticweb.org/ali/ontologies/2023/11/RecipeOntolgy#Step2__Heat_butter_in_a_non-stick_skillet_over_medium_heat_until_melted_and_foamy."/>
+        <RecipeOntolgy:hasInstructions rdf:resource="http://www.semanticweb.org/ali/ontologies/2023/11/RecipeOntolgy#Step3_Pour_the_egg_mixture_into_the_skillet_swirling_it_around_to_ensure_even_cooking."/>
+        <RecipeOntolgy:hasInstructions rdf:resource="http://www.semanticweb.org/ali/ontologies/2023/11/RecipeOntolgy#Step4_As_the_edges_set_gently_lift_them_with_a_spatula__allowing_the_uncooked_eggs_to_flow_underneath."/>
+        <RecipeOntolgy:hasInstructions rdf:resource="http://www.semanticweb.org/ali/ontologies/2023/11/RecipeOntolgy#Step5_Sprinkle_shredded_cheddar_cheese_evenly_across_one_side_of_the_omelette."/>
+        <RecipeOntolgy:hasInstructions rdf:resource="http://www.semanticweb.org/ali/ontologies/2023/11/RecipeOntolgy#Step6_Carefully_fold_the_other_half_of_the_omelette_over_the_cheesy_side_creating_a_half-moon_shape."/>
+        <RecipeOntolgy:hasInstructions rdf:resource="http://www.semanticweb.org/ali/ontologies/2023/11/RecipeOntolgy#Step7_Cook_for_an_additional_minute_to_melt_the_cheese_and_ensure_the_omelette_is_fully_cooked_inside."/>
+        <RecipeOntolgy:hasInstructions rdf:resource="http://www.semanticweb.org/ali/ontologies/2023/11/RecipeOntolgy#Step8_Slide_the_omelette_onto_a_plate_garnish_with_fresh_parsely_and_serve_immediately."/>
+        <RecipeOntolgy:hasNutrition rdf:resource="http://www.semanticweb.org/ali/ontologies/2023/11/RecipeOntolgy#Caloric_Value:_117_calories_per_serving"/>
+        <RecipeOntolgy:hasNutrition rdf:resource="http://www.semanticweb.org/ali/ontologies/2023/11/RecipeOntolgy#Carbohydrate_Content:_2.2g"/>
+        <RecipeOntolgy:hasNutrition rdf:resource="http://www.semanticweb.org/ali/ontologies/2023/11/RecipeOntolgy#Protein_Content:_9.5g"/>
+        <RecipeOntolgy:hasNutrition rdf:resource="http://www.semanticweb.org/ali/ontologies/2023/11/RecipeOntolgy#Total_Fat:_31g"/>
+        <schema:name>Cheese Omelette</schema:name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ali/ontologies/2023/11/RecipeOntolgy#Salt_and_black_pepper_to_taste -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ali/ontologies/2023/11/RecipeOntolgy#Salt_and_black_pepper_to_taste">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ali/ontologies/2023/11/RecipeOntolgy#Ingredient"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ali/ontologies/2023/11/RecipeOntolgy#Step1_Cook_fettuccine_pasta_according_to_package_instructions._Drain_and_set_aside. -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ali/ontologies/2023/11/RecipeOntolgy#Step1_Cook_fettuccine_pasta_according_to_package_instructions._Drain_and_set_aside.">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ali/ontologies/2023/11/RecipeOntolgy#Instructions"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ali/ontologies/2023/11/RecipeOntolgy#Step1_Crack_the_eggs_into_a_bowl_add_milk__salt_and_black_pepper._Whisk_until_well_combined. -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ali/ontologies/2023/11/RecipeOntolgy#Step1_Crack_the_eggs_into_a_bowl_add_milk__salt_and_black_pepper._Whisk_until_well_combined.">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ali/ontologies/2023/11/RecipeOntolgy#Instructions"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ali/ontologies/2023/11/RecipeOntolgy#Step2_In_a_large_skillet_melt_the_butter_over_medium_heat. -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ali/ontologies/2023/11/RecipeOntolgy#Step2_In_a_large_skillet_melt_the_butter_over_medium_heat.">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ali/ontologies/2023/11/RecipeOntolgy#Instructions"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ali/ontologies/2023/11/RecipeOntolgy#Step2__Heat_butter_in_a_non-stick_skillet_over_medium_heat_until_melted_and_foamy. -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ali/ontologies/2023/11/RecipeOntolgy#Step2__Heat_butter_in_a_non-stick_skillet_over_medium_heat_until_melted_and_foamy.">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ali/ontologies/2023/11/RecipeOntolgy#Instructions"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ali/ontologies/2023/11/RecipeOntolgy#Step3_Pour_in_the_heavy_cream_stirring_continuously_until_it_starts_to_simmer. -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ali/ontologies/2023/11/RecipeOntolgy#Step3_Pour_in_the_heavy_cream_stirring_continuously_until_it_starts_to_simmer.">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ali/ontologies/2023/11/RecipeOntolgy#Instructions"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ali/ontologies/2023/11/RecipeOntolgy#Step3_Pour_the_egg_mixture_into_the_skillet_swirling_it_around_to_ensure_even_cooking. -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ali/ontologies/2023/11/RecipeOntolgy#Step3_Pour_the_egg_mixture_into_the_skillet_swirling_it_around_to_ensure_even_cooking.">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ali/ontologies/2023/11/RecipeOntolgy#Instructions"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ali/ontologies/2023/11/RecipeOntolgy#Step4_As_the_edges_set_gently_lift_them_with_a_spatula__allowing_the_uncooked_eggs_to_flow_underneath. -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ali/ontologies/2023/11/RecipeOntolgy#Step4_As_the_edges_set_gently_lift_them_with_a_spatula__allowing_the_uncooked_eggs_to_flow_underneath.">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ali/ontologies/2023/11/RecipeOntolgy#Instructions"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ali/ontologies/2023/11/RecipeOntolgy#Step4_Reduce_heat_to_low_and_gradually_add_grated_Parmesan_cheese_stirring_until_the_sauce_is_smooth_and_creamy. -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ali/ontologies/2023/11/RecipeOntolgy#Step4_Reduce_heat_to_low_and_gradually_add_grated_Parmesan_cheese_stirring_until_the_sauce_is_smooth_and_creamy.">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ali/ontologies/2023/11/RecipeOntolgy#Instructions"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ali/ontologies/2023/11/RecipeOntolgy#Step5_Season_with_salt_and_black_pepper_to_taste._Adjust_the_consistency_with_a_little_pasta_water_if_needed. -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ali/ontologies/2023/11/RecipeOntolgy#Step5_Season_with_salt_and_black_pepper_to_taste._Adjust_the_consistency_with_a_little_pasta_water_if_needed.">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ali/ontologies/2023/11/RecipeOntolgy#Instructions"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ali/ontologies/2023/11/RecipeOntolgy#Step5_Sprinkle_shredded_cheddar_cheese_evenly_across_one_side_of_the_omelette. -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ali/ontologies/2023/11/RecipeOntolgy#Step5_Sprinkle_shredded_cheddar_cheese_evenly_across_one_side_of_the_omelette.">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ali/ontologies/2023/11/RecipeOntolgy#Instructions"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ali/ontologies/2023/11/RecipeOntolgy#Step6_Add_the_cooked_fettuccine_to_the_skillet_tossing_to_coat_the_pasta_evenly_in_the_Alfredo_sauce. -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ali/ontologies/2023/11/RecipeOntolgy#Step6_Add_the_cooked_fettuccine_to_the_skillet_tossing_to_coat_the_pasta_evenly_in_the_Alfredo_sauce.">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ali/ontologies/2023/11/RecipeOntolgy#Instructions"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ali/ontologies/2023/11/RecipeOntolgy#Step6_Carefully_fold_the_other_half_of_the_omelette_over_the_cheesy_side_creating_a_half-moon_shape. -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ali/ontologies/2023/11/RecipeOntolgy#Step6_Carefully_fold_the_other_half_of_the_omelette_over_the_cheesy_side_creating_a_half-moon_shape.">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ali/ontologies/2023/11/RecipeOntolgy#Instructions"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ali/ontologies/2023/11/RecipeOntolgy#Step7_Cook_for_an_additional_2-3_minutes_until_the_pasta_is_heated_through. -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ali/ontologies/2023/11/RecipeOntolgy#Step7_Cook_for_an_additional_2-3_minutes_until_the_pasta_is_heated_through.">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ali/ontologies/2023/11/RecipeOntolgy#Instructions"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ali/ontologies/2023/11/RecipeOntolgy#Step7_Cook_for_an_additional_minute_to_melt_the_cheese_and_ensure_the_omelette_is_fully_cooked_inside. -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ali/ontologies/2023/11/RecipeOntolgy#Step7_Cook_for_an_additional_minute_to_melt_the_cheese_and_ensure_the_omelette_is_fully_cooked_inside.">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ali/ontologies/2023/11/RecipeOntolgy#Instructions"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ali/ontologies/2023/11/RecipeOntolgy#Step8_Garnish_with_fresh_parsley_and_serve_immediately. -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ali/ontologies/2023/11/RecipeOntolgy#Step8_Garnish_with_fresh_parsley_and_serve_immediately.">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ali/ontologies/2023/11/RecipeOntolgy#Instructions"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ali/ontologies/2023/11/RecipeOntolgy#Step8_Slide_the_omelette_onto_a_plate_garnish_with_fresh_parsely_and_serve_immediately. -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ali/ontologies/2023/11/RecipeOntolgy#Step8_Slide_the_omelette_onto_a_plate_garnish_with_fresh_parsely_and_serve_immediately.">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ali/ontologies/2023/11/RecipeOntolgy#Instructions"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ali/ontologies/2023/11/RecipeOntolgy#1_cup_grated_Parmesan_cheese -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ali/ontologies/2023/11/RecipeOntolgy#1_cup_grated_Parmesan_cheese">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ali/ontologies/2023/11/RecipeOntolgy#Ingredient"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ali/ontologies/2023/11/RecipeOntolgy#1_cup_heavy_cream -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ali/ontologies/2023/11/RecipeOntolgy#1_cup_heavy_cream">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ali/ontologies/2023/11/RecipeOntolgy#Ingredient"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ali/ontologies/2023/11/RecipeOntolgy#1_tablespoon_butter -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ali/ontologies/2023/11/RecipeOntolgy#1_tablespoon_butter">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ali/ontologies/2023/11/RecipeOntolgy#Ingredient"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ali/ontologies/2023/11/RecipeOntolgy#1/2_cup_shredded_cheddar_cheese -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ali/ontologies/2023/11/RecipeOntolgy#1/2_cup_shredded_cheddar_cheese">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ali/ontologies/2023/11/RecipeOntolgy#Ingredient"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ali/ontologies/2023/11/RecipeOntolgy#1/2_cup_unsalted_butter -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ali/ontologies/2023/11/RecipeOntolgy#1/2_cup_unsalted_butter">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ali/ontologies/2023/11/RecipeOntolgy#Ingredient"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ali/ontologies/2023/11/RecipeOntolgy#1/4_cup_milk -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ali/ontologies/2023/11/RecipeOntolgy#1/4_cup_milk">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ali/ontologies/2023/11/RecipeOntolgy#Ingredient"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ali/ontologies/2023/11/RecipeOntolgy#3_large_eggs -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ali/ontologies/2023/11/RecipeOntolgy#3_large_eggs">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ali/ontologies/2023/11/RecipeOntolgy#Ingredient"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ali/ontologies/2023/11/RecipeOntolgy#8_oz_fettuccine_pasta -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ali/ontologies/2023/11/RecipeOntolgy#8_oz_fettuccine_pasta">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ali/ontologies/2023/11/RecipeOntolgy#Ingredient"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ali/ontologies/2023/11/RecipeOntolgy#Caloric_Value:_117_calories_per_serving -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ali/ontologies/2023/11/RecipeOntolgy#Caloric_Value:_117_calories_per_serving">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ali/ontologies/2023/11/RecipeOntolgy#CaloricInformation"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ali/ontologies/2023/11/RecipeOntolgy#Caloric_Value:_550_calories_per_serving -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ali/ontologies/2023/11/RecipeOntolgy#Caloric_Value:_550_calories_per_serving">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ali/ontologies/2023/11/RecipeOntolgy#CaloricInformation"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ali/ontologies/2023/11/RecipeOntolgy#Carbohydrate_Content:_2.2g -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ali/ontologies/2023/11/RecipeOntolgy#Carbohydrate_Content:_2.2g">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ali/ontologies/2023/11/RecipeOntolgy#CarbohydrateContent"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ali/ontologies/2023/11/RecipeOntolgy#Carbohydrate_Content:_35g -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ali/ontologies/2023/11/RecipeOntolgy#Carbohydrate_Content:_35g">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ali/ontologies/2023/11/RecipeOntolgy#CarbohydrateContent"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ali/ontologies/2023/11/RecipeOntolgy#Fat_Content:_40g -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ali/ontologies/2023/11/RecipeOntolgy#Fat_Content:_40g">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ali/ontologies/2023/11/RecipeOntolgy#FatContent"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ali/ontologies/2023/11/RecipeOntolgy#Protein_Content:_15g -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ali/ontologies/2023/11/RecipeOntolgy#Protein_Content:_15g">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ali/ontologies/2023/11/RecipeOntolgy#ProteinContent"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ali/ontologies/2023/11/RecipeOntolgy#Protein_Content:_9.5g -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ali/ontologies/2023/11/RecipeOntolgy#Protein_Content:_9.5g">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ali/ontologies/2023/11/RecipeOntolgy#ProteinContent"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ali/ontologies/2023/11/RecipeOntolgy#Total_Fat:_31g -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ali/ontologies/2023/11/RecipeOntolgy#Total_Fat:_31g">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ali/ontologies/2023/11/RecipeOntolgy#FatContent"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotations
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    <rdf:Description rdf:about="http://www.semanticweb.org/ali/ontologies/2023/11/RecipeOntolgy#Breakfast">
+        <rdfs:comment>The initial meal of the day, typically consumed in the morning.</rdfs:comment>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Breakfast</rdfs:label>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://www.w3.org/2000/01/rdf-schema#seeAlso">
+        <rdfs:comment>A relationship connecting a recipe to its constituent elements.</rdfs:comment>
+        <rdfs:comment>A relationship indicating the category to which an entity belongs.</rdfs:comment>
+    </rdf:Description>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi -->
+

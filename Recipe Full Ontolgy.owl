@@ -1,0 +1,1536 @@
+<?xml version="1.0"?>
+<Ontology xmlns="http://www.w3.org/2002/07/owl#"
+     xml:base="http://www.semanticweb.org/ali/ontologies/2023/11/RecipeOntolgy"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     ontologyIRI="http://www.semanticweb.org/ali/ontologies/2023/11/RecipeOntolgy">
+    <Prefix name="" IRI="http://www.semanticweb.org/ali/ontologies/2023/11/RecipeOntolgy"/>
+    <Prefix name="owl" IRI="http://www.w3.org/2002/07/owl#"/>
+    <Prefix name="rdf" IRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#"/>
+    <Prefix name="xml" IRI="http://www.w3.org/XML/1998/namespace"/>
+    <Prefix name="xsd" IRI="http://www.w3.org/2001/XMLSchema#"/>
+    <Prefix name="rdfs" IRI="http://www.w3.org/2000/01/rdf-schema#"/>
+    <Prefix name="schema" IRI="http://schema.org/"/>
+    <Prefix name="RecipeOntolgy" IRI="http://www.semanticweb.org/ali/ontologies/2023/11/RecipeOntolgy#"/>
+    <Declaration>
+        <Class abbreviatedIRI="schema:Person"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Appetizer"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#BakingInstructions"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Beverage"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#BlendingInstructions"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#BoilingInstructions"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Breakfast"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#CaloricInformation"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#CarbohydrateContent"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#CookingTechnique"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Dairy"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Dessert"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#DietaryFiberContent"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#FatContent"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Fruit"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#FryingInstructions"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Grain"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#GrillingInstructions"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Herb"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Ingredient"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#IngredientCategory"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Instructions"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#MainCourse"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Meat"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#MineralContent"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#MixingInstructions"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Nutrition"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#ProteinContent"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Recipe"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#RecipeCategory"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#RoastingInstructions"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Salad"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#SauteingInstructions"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Seafood"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#SideDish"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Soup"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Spice"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#SugarContent"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Vegetable"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#VitaminContent"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#belongsToCategory"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#belongsToRecipe"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasCategory"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasChef"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasIngredient"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasInstructions"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasNutrition"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasTechnique"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#isComponentOf"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#isFollowedBy"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#isSimilarTo"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#isSubstituteFor"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#requiresIngredient"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty abbreviatedIRI="schema:givenName"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty abbreviatedIRI="schema:name"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty abbreviatedIRI="schema:value"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#cookingTemperature"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#cookingTime"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#cuisineType"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#glutenFree"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#ingredientName"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#ironContent"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#lowCalorie"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#mealType"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#organic"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#prepTime"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#preparationSteps"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#recommendedProteinIntake"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#seasonal"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#servingSize"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#spicy"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#tasteProfile"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#vegetarian"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#vitaminDContent"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Breakfast"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Chef1"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Chef2"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Fresh_parsley_for_garnish"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Main_Course"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Recipe1"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Recipe2"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Salt_and_black_pepper_to_taste"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Step1_Cook_fettuccine_pasta_according_to_package_instructions._Drain_and_set_aside."/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Step1_Crack_the_eggs_into_a_bowl_add_milk__salt_and_black_pepper._Whisk_until_well_combined."/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Step2_In_a_large_skillet_melt_the_butter_over_medium_heat."/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Step2__Heat_butter_in_a_non-stick_skillet_over_medium_heat_until_melted_and_foamy."/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Step3_Pour_in_the_heavy_cream_stirring_continuously_until_it_starts_to_simmer."/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Step3_Pour_the_egg_mixture_into_the_skillet_swirling_it_around_to_ensure_even_cooking."/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Step4_As_the_edges_set_gently_lift_them_with_a_spatula__allowing_the_uncooked_eggs_to_flow_underneath."/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Step4_Reduce_heat_to_low_and_gradually_add_grated_Parmesan_cheese_stirring_until_the_sauce_is_smooth_and_creamy."/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Step5_Season_with_salt_and_black_pepper_to_taste._Adjust_the_consistency_with_a_little_pasta_water_if_needed."/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Step5_Sprinkle_shredded_cheddar_cheese_evenly_across_one_side_of_the_omelette."/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Step6_Add_the_cooked_fettuccine_to_the_skillet_tossing_to_coat_the_pasta_evenly_in_the_Alfredo_sauce."/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Step6_Carefully_fold_the_other_half_of_the_omelette_over_the_cheesy_side_creating_a_half-moon_shape."/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Step7_Cook_for_an_additional_2-3_minutes_until_the_pasta_is_heated_through."/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Step7_Cook_for_an_additional_minute_to_melt_the_cheese_and_ensure_the_omelette_is_fully_cooked_inside."/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Step8_Garnish_with_fresh_parsley_and_serve_immediately."/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Step8_Slide_the_omelette_onto_a_plate_garnish_with_fresh_parsely_and_serve_immediately."/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#1_cup_grated_Parmesan_cheese"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#1_cup_heavy_cream"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#1_tablespoon_butter"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#1/2_cup_shredded_cheddar_cheese"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#1/2_cup_unsalted_butter"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#1/4_cup_milk"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#3_large_eggs"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#8_oz_fettuccine_pasta"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Caloric_Value:_117_calories_per_serving"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Caloric_Value:_550_calories_per_serving"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Carbohydrate_Content:_2.2g"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Carbohydrate_Content:_35g"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Fat_Content:_40g"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Protein_Content:_15g"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Protein_Content:_9.5g"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Total_Fat:_31g"/>
+    </Declaration>
+    <SubClassOf>
+        <Class IRI="#Appetizer"/>
+        <Class IRI="#Recipe"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#BakingInstructions"/>
+        <Class IRI="#Instructions"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Beverage"/>
+        <Class IRI="#Recipe"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#BlendingInstructions"/>
+        <Class IRI="#Instructions"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#BoilingInstructions"/>
+        <Class IRI="#Instructions"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Breakfast"/>
+        <Class IRI="#Recipe"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#CaloricInformation"/>
+        <Class IRI="#Nutrition"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#CarbohydrateContent"/>
+        <Class IRI="#Nutrition"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Dairy"/>
+        <Class IRI="#Ingredient"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Dessert"/>
+        <Class IRI="#Recipe"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#DietaryFiberContent"/>
+        <Class IRI="#Nutrition"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#FatContent"/>
+        <Class IRI="#Nutrition"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Fruit"/>
+        <Class IRI="#Ingredient"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#FryingInstructions"/>
+        <Class IRI="#Instructions"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Grain"/>
+        <Class IRI="#Ingredient"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#GrillingInstructions"/>
+        <Class IRI="#Instructions"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Herb"/>
+        <Class IRI="#Ingredient"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#MainCourse"/>
+        <Class IRI="#Recipe"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Meat"/>
+        <Class IRI="#Ingredient"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#MineralContent"/>
+        <Class IRI="#Nutrition"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#MixingInstructions"/>
+        <Class IRI="#Instructions"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#ProteinContent"/>
+        <Class IRI="#Nutrition"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#RoastingInstructions"/>
+        <Class IRI="#Instructions"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Salad"/>
+        <Class IRI="#Recipe"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#SauteingInstructions"/>
+        <Class IRI="#Instructions"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Seafood"/>
+        <Class IRI="#Ingredient"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#SideDish"/>
+        <Class IRI="#Recipe"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Soup"/>
+        <Class IRI="#Recipe"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Spice"/>
+        <Class IRI="#Ingredient"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#SugarContent"/>
+        <Class IRI="#Nutrition"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Vegetable"/>
+        <Class IRI="#Ingredient"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#VitaminContent"/>
+        <Class IRI="#Nutrition"/>
+    </SubClassOf>
+    <DisjointClasses>
+        <Class IRI="#Recipe"/>
+        <Class IRI="#RecipeCategory"/>
+    </DisjointClasses>
+    <ClassAssertion>
+        <Class IRI="#RecipeCategory"/>
+        <NamedIndividual IRI="#Breakfast"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="schema:Person"/>
+        <NamedIndividual IRI="#Chef1"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="schema:Person"/>
+        <NamedIndividual IRI="#Chef2"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Ingredient"/>
+        <NamedIndividual IRI="#Fresh_parsley_for_garnish"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#RecipeCategory"/>
+        <NamedIndividual IRI="#Main_Course"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Recipe"/>
+        <NamedIndividual IRI="#Recipe1"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Recipe"/>
+        <NamedIndividual IRI="#Recipe2"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Ingredient"/>
+        <NamedIndividual IRI="#Salt_and_black_pepper_to_taste"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Instructions"/>
+        <NamedIndividual IRI="#Step1_Cook_fettuccine_pasta_according_to_package_instructions._Drain_and_set_aside."/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Instructions"/>
+        <NamedIndividual IRI="#Step1_Crack_the_eggs_into_a_bowl_add_milk__salt_and_black_pepper._Whisk_until_well_combined."/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Instructions"/>
+        <NamedIndividual IRI="#Step2_In_a_large_skillet_melt_the_butter_over_medium_heat."/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Instructions"/>
+        <NamedIndividual IRI="#Step2__Heat_butter_in_a_non-stick_skillet_over_medium_heat_until_melted_and_foamy."/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Instructions"/>
+        <NamedIndividual IRI="#Step3_Pour_in_the_heavy_cream_stirring_continuously_until_it_starts_to_simmer."/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Instructions"/>
+        <NamedIndividual IRI="#Step3_Pour_the_egg_mixture_into_the_skillet_swirling_it_around_to_ensure_even_cooking."/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Instructions"/>
+        <NamedIndividual IRI="#Step4_As_the_edges_set_gently_lift_them_with_a_spatula__allowing_the_uncooked_eggs_to_flow_underneath."/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Instructions"/>
+        <NamedIndividual IRI="#Step4_Reduce_heat_to_low_and_gradually_add_grated_Parmesan_cheese_stirring_until_the_sauce_is_smooth_and_creamy."/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Instructions"/>
+        <NamedIndividual IRI="#Step5_Season_with_salt_and_black_pepper_to_taste._Adjust_the_consistency_with_a_little_pasta_water_if_needed."/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Instructions"/>
+        <NamedIndividual IRI="#Step5_Sprinkle_shredded_cheddar_cheese_evenly_across_one_side_of_the_omelette."/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Instructions"/>
+        <NamedIndividual IRI="#Step6_Add_the_cooked_fettuccine_to_the_skillet_tossing_to_coat_the_pasta_evenly_in_the_Alfredo_sauce."/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Instructions"/>
+        <NamedIndividual IRI="#Step6_Carefully_fold_the_other_half_of_the_omelette_over_the_cheesy_side_creating_a_half-moon_shape."/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Instructions"/>
+        <NamedIndividual IRI="#Step7_Cook_for_an_additional_2-3_minutes_until_the_pasta_is_heated_through."/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Instructions"/>
+        <NamedIndividual IRI="#Step7_Cook_for_an_additional_minute_to_melt_the_cheese_and_ensure_the_omelette_is_fully_cooked_inside."/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Instructions"/>
+        <NamedIndividual IRI="#Step8_Garnish_with_fresh_parsley_and_serve_immediately."/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Instructions"/>
+        <NamedIndividual IRI="#Step8_Slide_the_omelette_onto_a_plate_garnish_with_fresh_parsely_and_serve_immediately."/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Ingredient"/>
+        <NamedIndividual IRI="#1_cup_grated_Parmesan_cheese"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Ingredient"/>
+        <NamedIndividual IRI="#1_cup_heavy_cream"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Ingredient"/>
+        <NamedIndividual IRI="#1_tablespoon_butter"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Ingredient"/>
+        <NamedIndividual IRI="#1/2_cup_shredded_cheddar_cheese"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Ingredient"/>
+        <NamedIndividual IRI="#1/2_cup_unsalted_butter"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Ingredient"/>
+        <NamedIndividual IRI="#1/4_cup_milk"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Ingredient"/>
+        <NamedIndividual IRI="#3_large_eggs"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Ingredient"/>
+        <NamedIndividual IRI="#8_oz_fettuccine_pasta"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#CaloricInformation"/>
+        <NamedIndividual IRI="#Caloric_Value:_117_calories_per_serving"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#CaloricInformation"/>
+        <NamedIndividual IRI="#Caloric_Value:_550_calories_per_serving"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#CarbohydrateContent"/>
+        <NamedIndividual IRI="#Carbohydrate_Content:_2.2g"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#CarbohydrateContent"/>
+        <NamedIndividual IRI="#Carbohydrate_Content:_35g"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#FatContent"/>
+        <NamedIndividual IRI="#Fat_Content:_40g"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#ProteinContent"/>
+        <NamedIndividual IRI="#Protein_Content:_15g"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#ProteinContent"/>
+        <NamedIndividual IRI="#Protein_Content:_9.5g"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#FatContent"/>
+        <NamedIndividual IRI="#Total_Fat:_31g"/>
+    </ClassAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#belongsToCategory"/>
+        <NamedIndividual IRI="#Recipe1"/>
+        <NamedIndividual IRI="#Main_Course"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasIngredient"/>
+        <NamedIndividual IRI="#Recipe1"/>
+        <NamedIndividual IRI="#Fresh_parsley_for_garnish"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasIngredient"/>
+        <NamedIndividual IRI="#Recipe1"/>
+        <NamedIndividual IRI="#Salt_and_black_pepper_to_taste"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasIngredient"/>
+        <NamedIndividual IRI="#Recipe1"/>
+        <NamedIndividual IRI="#1_cup_grated_Parmesan_cheese"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasIngredient"/>
+        <NamedIndividual IRI="#Recipe1"/>
+        <NamedIndividual IRI="#1_cup_heavy_cream"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasIngredient"/>
+        <NamedIndividual IRI="#Recipe1"/>
+        <NamedIndividual IRI="#1/2_cup_unsalted_butter"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasIngredient"/>
+        <NamedIndividual IRI="#Recipe1"/>
+        <NamedIndividual IRI="#8_oz_fettuccine_pasta"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasInstructions"/>
+        <NamedIndividual IRI="#Recipe1"/>
+        <NamedIndividual IRI="#Step1_Cook_fettuccine_pasta_according_to_package_instructions._Drain_and_set_aside."/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasInstructions"/>
+        <NamedIndividual IRI="#Recipe1"/>
+        <NamedIndividual IRI="#Step2_In_a_large_skillet_melt_the_butter_over_medium_heat."/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasInstructions"/>
+        <NamedIndividual IRI="#Recipe1"/>
+        <NamedIndividual IRI="#Step3_Pour_in_the_heavy_cream_stirring_continuously_until_it_starts_to_simmer."/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasInstructions"/>
+        <NamedIndividual IRI="#Recipe1"/>
+        <NamedIndividual IRI="#Step4_Reduce_heat_to_low_and_gradually_add_grated_Parmesan_cheese_stirring_until_the_sauce_is_smooth_and_creamy."/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasInstructions"/>
+        <NamedIndividual IRI="#Recipe1"/>
+        <NamedIndividual IRI="#Step5_Season_with_salt_and_black_pepper_to_taste._Adjust_the_consistency_with_a_little_pasta_water_if_needed."/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasInstructions"/>
+        <NamedIndividual IRI="#Recipe1"/>
+        <NamedIndividual IRI="#Step6_Add_the_cooked_fettuccine_to_the_skillet_tossing_to_coat_the_pasta_evenly_in_the_Alfredo_sauce."/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasInstructions"/>
+        <NamedIndividual IRI="#Recipe1"/>
+        <NamedIndividual IRI="#Step7_Cook_for_an_additional_2-3_minutes_until_the_pasta_is_heated_through."/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasInstructions"/>
+        <NamedIndividual IRI="#Recipe1"/>
+        <NamedIndividual IRI="#Step8_Garnish_with_fresh_parsley_and_serve_immediately."/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasNutrition"/>
+        <NamedIndividual IRI="#Recipe1"/>
+        <NamedIndividual IRI="#Caloric_Value:_550_calories_per_serving"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasNutrition"/>
+        <NamedIndividual IRI="#Recipe1"/>
+        <NamedIndividual IRI="#Carbohydrate_Content:_35g"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasNutrition"/>
+        <NamedIndividual IRI="#Recipe1"/>
+        <NamedIndividual IRI="#Fat_Content:_40g"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasNutrition"/>
+        <NamedIndividual IRI="#Recipe1"/>
+        <NamedIndividual IRI="#Protein_Content:_15g"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#belongsToCategory"/>
+        <NamedIndividual IRI="#Recipe2"/>
+        <NamedIndividual IRI="#Breakfast"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasIngredient"/>
+        <NamedIndividual IRI="#Recipe2"/>
+        <NamedIndividual IRI="#Fresh_parsley_for_garnish"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasIngredient"/>
+        <NamedIndividual IRI="#Recipe2"/>
+        <NamedIndividual IRI="#Salt_and_black_pepper_to_taste"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasIngredient"/>
+        <NamedIndividual IRI="#Recipe2"/>
+        <NamedIndividual IRI="#1_tablespoon_butter"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasIngredient"/>
+        <NamedIndividual IRI="#Recipe2"/>
+        <NamedIndividual IRI="#1/2_cup_shredded_cheddar_cheese"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasIngredient"/>
+        <NamedIndividual IRI="#Recipe2"/>
+        <NamedIndividual IRI="#1/4_cup_milk"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasIngredient"/>
+        <NamedIndividual IRI="#Recipe2"/>
+        <NamedIndividual IRI="#3_large_eggs"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasInstructions"/>
+        <NamedIndividual IRI="#Recipe2"/>
+        <NamedIndividual IRI="#Step1_Crack_the_eggs_into_a_bowl_add_milk__salt_and_black_pepper._Whisk_until_well_combined."/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasInstructions"/>
+        <NamedIndividual IRI="#Recipe2"/>
+        <NamedIndividual IRI="#Step2__Heat_butter_in_a_non-stick_skillet_over_medium_heat_until_melted_and_foamy."/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasInstructions"/>
+        <NamedIndividual IRI="#Recipe2"/>
+        <NamedIndividual IRI="#Step3_Pour_the_egg_mixture_into_the_skillet_swirling_it_around_to_ensure_even_cooking."/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasInstructions"/>
+        <NamedIndividual IRI="#Recipe2"/>
+        <NamedIndividual IRI="#Step4_As_the_edges_set_gently_lift_them_with_a_spatula__allowing_the_uncooked_eggs_to_flow_underneath."/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasInstructions"/>
+        <NamedIndividual IRI="#Recipe2"/>
+        <NamedIndividual IRI="#Step5_Sprinkle_shredded_cheddar_cheese_evenly_across_one_side_of_the_omelette."/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasInstructions"/>
+        <NamedIndividual IRI="#Recipe2"/>
+        <NamedIndividual IRI="#Step6_Carefully_fold_the_other_half_of_the_omelette_over_the_cheesy_side_creating_a_half-moon_shape."/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasInstructions"/>
+        <NamedIndividual IRI="#Recipe2"/>
+        <NamedIndividual IRI="#Step7_Cook_for_an_additional_minute_to_melt_the_cheese_and_ensure_the_omelette_is_fully_cooked_inside."/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasInstructions"/>
+        <NamedIndividual IRI="#Recipe2"/>
+        <NamedIndividual IRI="#Step8_Slide_the_omelette_onto_a_plate_garnish_with_fresh_parsely_and_serve_immediately."/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasNutrition"/>
+        <NamedIndividual IRI="#Recipe2"/>
+        <NamedIndividual IRI="#Caloric_Value:_117_calories_per_serving"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasNutrition"/>
+        <NamedIndividual IRI="#Recipe2"/>
+        <NamedIndividual IRI="#Carbohydrate_Content:_2.2g"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasNutrition"/>
+        <NamedIndividual IRI="#Recipe2"/>
+        <NamedIndividual IRI="#Protein_Content:_9.5g"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasNutrition"/>
+        <NamedIndividual IRI="#Recipe2"/>
+        <NamedIndividual IRI="#Total_Fat:_31g"/>
+    </ObjectPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty abbreviatedIRI="schema:givenName"/>
+        <NamedIndividual IRI="#Chef1"/>
+        <Literal>Alfredo di Lelio</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty abbreviatedIRI="schema:givenName"/>
+        <NamedIndividual IRI="#Chef2"/>
+        <Literal>Gordon Ramsay</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty abbreviatedIRI="schema:name"/>
+        <NamedIndividual IRI="#Recipe1"/>
+        <Literal>Creamy Alfredo Pasta</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty abbreviatedIRI="schema:name"/>
+        <NamedIndividual IRI="#Recipe2"/>
+        <Literal>Cheese Omelette</Literal>
+    </DataPropertyAssertion>
+    <InverseObjectProperties>
+        <ObjectProperty IRI="#belongsToRecipe"/>
+        <ObjectProperty IRI="#hasNutrition"/>
+    </InverseObjectProperties>
+    <SymmetricObjectProperty>
+        <ObjectProperty IRI="#isFollowedBy"/>
+    </SymmetricObjectProperty>
+    <SymmetricObjectProperty>
+        <ObjectProperty IRI="#isSimilarTo"/>
+    </SymmetricObjectProperty>
+    <SymmetricObjectProperty>
+        <ObjectProperty IRI="#isSubstituteFor"/>
+    </SymmetricObjectProperty>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#belongsToCategory"/>
+        <Class IRI="#Recipe"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#belongsToRecipe"/>
+        <Class IRI="#Nutrition"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#hasCategory"/>
+        <Class IRI="#Ingredient"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#hasChef"/>
+        <Class IRI="#Recipe"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#hasIngredient"/>
+        <Class IRI="#Recipe"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#hasInstructions"/>
+        <Class IRI="#Recipe"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#hasNutrition"/>
+        <Class IRI="#Recipe"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#hasTechnique"/>
+        <Class IRI="#Instructions"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#isComponentOf"/>
+        <Class IRI="#Nutrition"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#isFollowedBy"/>
+        <Class IRI="#Instructions"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#isSimilarTo"/>
+        <Class IRI="#Recipe"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#isSubstituteFor"/>
+        <Class IRI="#Ingredient"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#requiresIngredient"/>
+        <Class IRI="#Instructions"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#belongsToCategory"/>
+        <Class IRI="#RecipeCategory"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#belongsToRecipe"/>
+        <Class IRI="#Recipe"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#hasCategory"/>
+        <Class IRI="#IngredientCategory"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#hasChef"/>
+        <Class abbreviatedIRI="schema:Person"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#hasIngredient"/>
+        <Class IRI="#Ingredient"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#hasInstructions"/>
+        <Class IRI="#Instructions"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#hasNutrition"/>
+        <Class IRI="#Nutrition"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#hasTechnique"/>
+        <Class IRI="#CookingTechnique"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#isComponentOf"/>
+        <Class IRI="#Ingredient"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#isFollowedBy"/>
+        <Class IRI="#Instructions"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#isSimilarTo"/>
+        <Class IRI="#Recipe"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#isSubstituteFor"/>
+        <Class IRI="#Ingredient"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#requiresIngredient"/>
+        <Class IRI="#Ingredient"/>
+    </ObjectPropertyRange>
+    <DataPropertyDomain>
+        <DataProperty abbreviatedIRI="schema:givenName"/>
+        <Class abbreviatedIRI="schema:Person"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty abbreviatedIRI="schema:name"/>
+        <Class IRI="#Recipe"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty abbreviatedIRI="schema:value"/>
+        <Class IRI="#Nutrition"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#cookingTemperature"/>
+        <Class IRI="#Instructions"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#cookingTime"/>
+        <Class IRI="#Recipe"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#cuisineType"/>
+        <Class IRI="#Recipe"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#glutenFree"/>
+        <Class IRI="#Grain"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#ingredientName"/>
+        <Class IRI="#Ingredient"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#ironContent"/>
+        <Class IRI="#Nutrition"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#lowCalorie"/>
+        <Class IRI="#CaloricInformation"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#mealType"/>
+        <Class IRI="#Recipe"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#organic"/>
+        <Class IRI="#Ingredient"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#prepTime"/>
+        <Class IRI="#Recipe"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#preparationSteps"/>
+        <Class IRI="#Instructions"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#recommendedProteinIntake"/>
+        <Class IRI="#ProteinContent"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#seasonal"/>
+        <Class IRI="#Ingredient"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#servingSize"/>
+        <Class IRI="#Recipe"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#spicy"/>
+        <Class IRI="#Recipe"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#tasteProfile"/>
+        <Class IRI="#Ingredient"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#vegetarian"/>
+        <Class IRI="#Recipe"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#vitaminDContent"/>
+        <Class IRI="#Nutrition"/>
+    </DataPropertyDomain>
+    <DataPropertyRange>
+        <DataProperty abbreviatedIRI="schema:givenName"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty abbreviatedIRI="schema:name"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty abbreviatedIRI="schema:value"/>
+        <Datatype abbreviatedIRI="xsd:integer"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#cookingTemperature"/>
+        <Datatype abbreviatedIRI="xsd:int"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#cookingTime"/>
+        <Datatype abbreviatedIRI="xsd:float"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#cuisineType"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#glutenFree"/>
+        <Datatype abbreviatedIRI="xsd:boolean"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#ingredientName"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#ironContent"/>
+        <Datatype abbreviatedIRI="xsd:float"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#lowCalorie"/>
+        <Datatype abbreviatedIRI="xsd:boolean"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#mealType"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#organic"/>
+        <Datatype abbreviatedIRI="xsd:boolean"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#prepTime"/>
+        <Datatype abbreviatedIRI="xsd:float"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#preparationSteps"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#recommendedProteinIntake"/>
+        <Datatype abbreviatedIRI="xsd:float"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#seasonal"/>
+        <Datatype abbreviatedIRI="xsd:boolean"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#servingSize"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#spicy"/>
+        <Datatype abbreviatedIRI="xsd:boolean"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#tasteProfile"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#vegetarian"/>
+        <Datatype abbreviatedIRI="xsd:boolean"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#vitaminDContent"/>
+        <Datatype abbreviatedIRI="xsd:float"/>
+    </DataPropertyRange>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <AbbreviatedIRI>schema:Person</AbbreviatedIRI>
+        <Literal>An individual, possibly a chef or involved in cooking or consuming a dish.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <AbbreviatedIRI>schema:givenName</AbbreviatedIRI>
+        <Literal>It represents the first or given name of an individual in an ontology.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <AbbreviatedIRI>schema:name</AbbreviatedIRI>
+        <Literal>The label or identifier for a recipe, ingredient, or dish.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <AbbreviatedIRI>schema:value</AbbreviatedIRI>
+        <Literal>The inherent worth or usefulness of an ingredient or dish.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Appetizer</IRI>
+        <Literal>A small dish served before the main course.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#BakingInstructions</IRI>
+        <Literal>Steps guiding the cooking of food in an oven.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Beverage</IRI>
+        <Literal>A drinkable liquid like tea, coffee, or juice.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#BlendingInstructions</IRI>
+        <Literal>Sequential steps providing guidance on the proper mixing of ingredients to achieve a harmonious blend.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#BoilingInstructions</IRI>
+        <Literal>Specific steps directing the cooking of food by submerging it in boiling water.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Breakfast</IRI>
+        <Literal>The initial meal of the day, typically consumed in the morning.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#CaloricInformation</IRI>
+        <Literal>Details regarding the energy content of a food item.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#CarbohydrateContent</IRI>
+        <Literal>Amount of carbohydrates in a food item.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#CookingTechnique</IRI>
+        <Literal>A skillful or specialized method used in cooking.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Dairy</IRI>
+        <Literal>Products derived from milk, such as cheese or yogurt.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Dessert</IRI>
+        <Literal>Sweet dishes served at the end of a meal.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#DietaryFiberContent</IRI>
+        <Literal>The measure of indigestible plant material in food, essential for digestive health.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#FatContent</IRI>
+        <Literal>Quantity of fats present in a food item.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Fruit</IRI>
+        <Literal>Edible, usually sweet, fleshy product of flowering plants.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#FryingInstructions</IRI>
+        <Literal>Steps directing the cooking of food in hot oil or fat.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Grain</IRI>
+        <Literal>A cereal crop, such as wheat or rice.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#GrillingInstructions</IRI>
+        <Literal>Steps guiding the cooking of food on a grill.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Herb</IRI>
+        <Literal>Plant or part of a plant valued for its flavor, scent, or medicinal properties, often used in cooking.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Ingredient</IRI>
+        <Literal>Constituent part used in the preparation of a recipe.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#IngredientCategory</IRI>
+        <Literal>Grouping of ingredients based on shared characteristics.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Instructions</IRI>
+        <Literal>A relationship indicating the category to which an entity belongs.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#MainCourse</IRI>
+        <Literal>The primary dish in a meal.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Meat</IRI>
+        <Literal>Edible animal flesh utilized as a food source.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#MineralContent</IRI>
+        <Literal>Presence and quantity of minerals in a food item.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#MixingInstructions</IRI>
+        <Literal>Guidelines for thoroughly combining ingredients during preparation.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Nutrition</IRI>
+        <Literal>The science of food and its impact on health.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#ProteinContent</IRI>
+        <Literal>Amount of protein present in a food item, essential for bodily functions.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Recipe</IRI>
+        <Literal>A set of instructions for preparing a particular dish.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#RecipeCategory</IRI>
+        <Literal>Classification of a recipe into a specific culinary group.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#RoastingInstructions</IRI>
+        <Literal>Steps guiding the cooking of food in an oven using dry heat.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Salad</IRI>
+        <Literal>A dish consisting of mixed vegetables.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#SauteingInstructions</IRI>
+        <Literal>steps directing the cooking of food in a small amount of oil.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Seafood</IRI>
+        <Literal>Edible aquatic animals used as food.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#SideDish</IRI>
+        <Literal>A supplementary dish served alongside the main course.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Soup</IRI>
+        <Literal>A liquid dish typically consisting of broth, vegetables, and sometimes meat or other ingredients.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Spice</IRI>
+        <Literal>A plant-derived substance used for flavoring.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#SugarContent</IRI>
+        <Literal>Quantity of sugar present in a food item.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Vegetable</IRI>
+        <Literal>Edible plant or part of a plant, often savory in flavor.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#VitaminContent</IRI>
+        <Literal>The quantity of vitamin C in a food item, contributing to immune function.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#belongsToCategory</IRI>
+        <Literal>A relationship indicating the category to which an entity belongs.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#belongsToRecipe</IRI>
+        <Literal>Indicates the association of elements like ingredients, instructions, or categories with a specific recipe, creating a connection to the culinary composition.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#cookingTemperature</IRI>
+        <Literal>The required heat level for cooking a dish.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#cookingTime</IRI>
+        <Literal>The duration required for the complete cooking of a dish.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#cuisineType</IRI>
+        <Literal>The specific style or tradition of cooking associated with a region or culture.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#glutenFree</IRI>
+        <Literal>A classification indicating the absence of gluten, suitable for individuals with gluten sensitivity.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#hasCategory</IRI>
+        <Literal>A relationship indicating the category to which an entity belongs.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#hasChef</IRI>
+        <Literal>A relationship connecting a recipe to the chef responsible for its creation.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#hasIngredient</IRI>
+        <Literal>A relationship connecting a recipe to its constituent elements.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#hasInstructions</IRI>
+        <Literal>A relationship linking a recipe to its step-by-step guide</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#hasNutrition</IRI>
+        <Literal>A relationship linking a recipe to its nutritional information.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#hasTechnique</IRI>
+        <Literal>This relationship signifies that a particular entity, such as a recipe or cooking method, possesses a specific technique</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#ingredientName</IRI>
+        <Literal>The name or label identifying a specific ingredient.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#ironContent</IRI>
+        <Literal>The amount of iron present in a food item.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#isComponentOf</IRI>
+        <Literal>A relationship indicating that an entity is part of another.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#isFollowedBy</IRI>
+        <Literal>A relationship indicating the sequence of steps in a process.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#isSimilarTo</IRI>
+        <Literal>A relationship indicating similarity between entities.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#isSubstituteFor</IRI>
+        <Literal>A relationship connecting entities that can replace one another.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#lowCalorie</IRI>
+        <Literal>A designation for food or dishes that are relatively low in calories.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#mealType</IRI>
+        <Literal>A classification of a dish based on its suitability for breakfast, lunch, or dinner.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#organic</IRI>
+        <Literal>Relating to or derived from living matter, often indicating the absence of synthetic additives.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#prepTime</IRI>
+        <Literal>The amount of time required to prepare a dish.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#preparationSteps</IRI>
+        <Literal>sequential actions required for the preparation of a dish.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#recommendedProteinIntake</IRI>
+        <Literal>A suggested amount of protein consumption for a specified purpose.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#requiresIngredient</IRI>
+        <Literal>A relationship indicating the ingredients needed for a recipe.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#seasonal</IRI>
+        <Literal>Pertaining to ingredients or dishes associated with a specific season.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#servingSize</IRI>
+        <Literal>The recommended portion size for a single serving of a dish.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#spicy</IRI>
+        <Literal>A characteristic indicating the presence of pungent or hot flavors.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#tasteProfile</IRI>
+        <Literal>The combination of flavors that characterize a dish.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#vegetarian</IRI>
+        <Literal>A diet excluding meat but including plant-based foods.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#vitaminDContent</IRI>
+        <Literal>The quantity of vitamin D in a food item, essential for bone health.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <AbbreviatedIRI>rdfs:seeAlso</AbbreviatedIRI>
+        <Literal>A relationship connecting a recipe to its constituent elements.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <AbbreviatedIRI>rdfs:seeAlso</AbbreviatedIRI>
+        <Literal>A relationship indicating the category to which an entity belongs.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <AbbreviatedIRI>owl:Thing</AbbreviatedIRI>
+        <Literal>A relationship indicating the category to which an entity belongs.</Literal>
+    </AnnotationAssertion>
+</Ontology>
+
+
+
+<!-- Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi -->
+
